@@ -29,7 +29,7 @@ var PINF = require( '@stdlib/constants-float32-pinf' );
 var NINF = require( '@stdlib/constants-float32-ninf' );
 var Float32Array = require( '@stdlib/array-float32' );
 var FLOAT32_SMALLEST_NORMAL = require( '@stdlib/constants-float32-smallest-normal' );
-var FLOAT32_SMALLEST_SUBNORMAL = require( '@stdlib/constants-float32-smallest-subnormal' ); -- eslint-disable-line id-length
+var FLOAT32_SMALLEST_SUBNORMAL = require( '@stdlib/constants-float32-smallest-subnormal' ); // eslint-disable-line id-length
 var toFloat32 = require( '@stdlib/number-float64-base-to-float32' );
 var normalizef = require( './../lib' );
 
