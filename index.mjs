@@ -1,0 +1,4 @@
+// Copyright (c) 2022 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import t from"https://cdn.jsdelivr.net/gh/stdlib-js/constants-float32-smallest-normal@esm/index.mjs";import s from"https://cdn.jsdelivr.net/gh/stdlib-js/constants-float32-pinf@esm/index.mjs";import n from"https://cdn.jsdelivr.net/gh/stdlib-js/constants-float32-ninf@esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs";import i from"https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@esm/index.mjs";var r=t,m=s,o=n,d=e,l=i;var a=function(t,s){return s!=s||s===m||s===o?(t[0]=s,t[1]=0,t):0!==s&&d(s)<r?(s=l(8388608*s),t[0]=s,t[1]=-23,t):(t[0]=s,t[1]=0,t)};var f=function(t,s){return 1===arguments.length?a([0,0],t):a(t,s)};export{f as default};
+//# sourceMappingURL=index.mjs.map
