@@ -24,30 +24,14 @@ limitations under the License.
 
 > Return a normal number `y` and exponent `exp` satisfying `x = y * 2^exp`.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/number-float32-base-normalize
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var normalizef = require( '@stdlib/number-float32-base-normalize' );
+import normalizef from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-normalize@esm/index.mjs';
 ```
 
 #### normalizef( \[out,] x )
@@ -55,7 +39,7 @@ var normalizef = require( '@stdlib/number-float32-base-normalize' );
 Returns a normal number `y` and exponent `exp` satisfying `x = y * 2^exp`.
 
 ```javascript
-var toFloat32 = require( '@stdlib/number-float64-base-to-float32' );
+import toFloat32 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@esm/index.mjs';
 
 var out = normalizef( toFloat32( 1.401e-45 ) );
 // returns [ 1.1754943508222875e-38, -23 ]
@@ -64,8 +48,8 @@ var out = normalizef( toFloat32( 1.401e-45 ) );
 By default, the function returns `y` and `exp` as a two-element `array`.
 
 ```javascript
-var toFloat32 = require( '@stdlib/number-float64-base-to-float32' );
-var pow = require( '@stdlib/math-base-special-pow' );
+import toFloat32 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@esm/index.mjs';
+import pow from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-pow@esm/index.mjs';
 
 var out = normalizef( toFloat32( 1.401e-45 ) );
 // returns [ 1.1754943508222875e-38, -23 ]
@@ -80,8 +64,8 @@ var bool = ( y*pow(2, exp) === toFloat32(1.401e-45) );
 To avoid unnecessary memory allocation, the function supports providing an output (destination) object.
 
 ```javascript
-var toFloat32 = require( '@stdlib/number-float64-base-to-float32' );
-var Float32Array = require( '@stdlib/array-float32' );
+import toFloat32 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@esm/index.mjs';
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var out = new Float32Array( 2 );
 
@@ -102,8 +86,8 @@ var out = normalizef( 0.0 );
 If `x` is either positive or negative `infinity` or `NaN`,
 
 ```javascript
-var PINF = require( '@stdlib/constants-float32-pinf' );
-var NINF = require( '@stdlib/constants-float32-ninf' );
+import PINF from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float32-pinf@esm/index.mjs';
+import NINF from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float32-ninf@esm/index.mjs';
 
 var out = normalizef( PINF );
 // returns [ Infinity, 0 ]
@@ -135,12 +119,17 @@ out = normalizef( NaN );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-base-randu' );
-var round = require( '@stdlib/math-base-special-round' );
-var pow = require( '@stdlib/math-base-special-pow' );
-var toFloat32 = require( '@stdlib/number-float64-base-to-float32' );
-var normalizef = require( '@stdlib/number-float32-base-normalize' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
+import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
+import pow from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-pow@esm/index.mjs';
+import toFloat32 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@esm/index.mjs';
+import normalizef from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-normalize@esm/index.mjs';
 
 var frac;
 var exp;
@@ -157,6 +146,10 @@ for ( i = 0; i < 100; i++ ) {
     v = normalizef( x );
     console.log( '%d = %d * 2^%d = %d', x, v[0], v[1], v[0]*pow(2.0, v[1]) );
 }
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -180,7 +173,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
