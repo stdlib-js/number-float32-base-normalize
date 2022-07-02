@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,31 +16,22 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var normalize = require( './normalize.js' );
-
-
-// MAIN //
+import { ArrayLike } from '@stdlib/types/array';
 
 /**
 * Returns a normal number `y` and exponent `exp` satisfying \\(x = y \cdot 2^\mathrm{exp}\\).
 *
-* @param {(Array|TypedArray|Object)} [out] - output array
-* @param {number} x - single-precision floating-point number
-* @returns {(Array|TypedArray|Object)} output array
+* @param out - output array
+* @param x - single-precision floating-point number
+* @returns output array
 *
 * @example
-* var toFloat32 = require( '@stdlib/number-float64-base-to-float32' );
-*
-* var v = normalizef( toFloat32( 1.401e-45 ) );
-* // returns [ 1.1754943508222875e-38, -23 ]
-*
-* @example
-* var Float32Array = require( '@stdlib/array-float32' );
-* var toFloat32 = require( '@stdlib/number-float64-base-to-float32' );
+* var Float32Array = require( `@stdlib/array/float32` );
+* var toFloat32 = require( `@stdlib/number/float64/base/to-float32` );
 *
 * var out = new Float32Array( 2 );
 *
@@ -49,19 +40,33 @@ var normalize = require( './normalize.js' );
 *
 * var bool = ( v === out );
 * // returns true
+*/
+declare function normalizef( out: ArrayLike<number>, x: number ): ArrayLike<number>; // tslint-disable-line max-line-length
+
+/**
+* Returns a normal number `y` and exponent `exp` satisfying \\(x = y \cdot 2^\mathrm{exp}\\).
+*
+* @param x - single-precision floating-point number
+* @returns output array
+*
+* @example
+* var toFloat32 = require( `@stdlib/number/float64/base/to-float32` );
+*
+* var v = normalizef( toFloat32( 1.401e-45 ) );
+* // returns [ 1.1754943508222875e-38, -23 ]
 *
 * @example
 * var v = normalizef( 0.0 );
 * // returns [ 0.0, 0 ]
 *
 * @example
-* var PINF = require( '@stdlib/constants-float32-pinf' );
+* var PINF = require( `@stdlib/constants/float32/pinf` );
 *
 * var v = normalizef( PINF );
 * // returns [ +Infinity, 0 ]
 *
 * @example
-* var NINF = require( '@stdlib/constants-float32-ninf' );
+* var NINF = require( `@stdlib/constants/float32/ninf` );
 *
 * var v = normalizef( NINF );
 * // returns [ -Infinity, 0 ]
@@ -70,14 +75,9 @@ var normalize = require( './normalize.js' );
 * var v = normalizef( NaN );
 * // returns [ NaN, 0 ]
 */
-function normalizef( out, x ) {
-	if ( arguments.length === 1 ) {
-		return normalize( [ 0.0, 0 ], out );
-	}
-	return normalize( out, x );
-}
+declare function normalizef( x: number ): ArrayLike<number>;
 
 
 // EXPORTS //
 
-module.exports = normalizef;
+export = normalizef;
