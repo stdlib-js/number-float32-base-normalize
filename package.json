@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/number-float32-base-normalize",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Return a normal number `y` and exponent `exp` satisfying `x = y * 2^exp`.",
   "license": "Apache-2.0",
   "author": {
@@ -39,19 +39,19 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/constants-float32-ninf": "^0.1.0",
-    "@stdlib/constants-float32-pinf": "^0.1.0",
+    "@stdlib/constants-float32-ninf": "^0.1.1",
+    "@stdlib/constants-float32-pinf": "^0.1.1",
     "@stdlib/constants-float32-smallest-normal": "^0.1.1",
-    "@stdlib/math-base-assert-is-infinitef": "^0.1.0",
+    "@stdlib/math-base-assert-is-infinitef": "^0.1.1",
     "@stdlib/math-base-assert-is-nanf": "^0.1.1",
-    "@stdlib/math-base-special-absf": "^0.1.0",
-    "@stdlib/number-float64-base-to-float32": "^0.1.0",
+    "@stdlib/math-base-special-absf": "^0.1.1",
+    "@stdlib/number-float64-base-to-float32": "^0.1.1",
     "@stdlib/types": "^0.1.0",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.1",
     "@stdlib/utils-library-manifest": "^0.1.1"
   },
   "devDependencies": {
-    "@stdlib/array-float32": "^0.1.0",
+    "@stdlib/array-float32": "^0.1.1",
     "@stdlib/assert-has-own-property": "^0.1.1",
     "@stdlib/assert-is-array": "^0.1.1",
     "@stdlib/assert-is-float32array": "^0.1.1",
