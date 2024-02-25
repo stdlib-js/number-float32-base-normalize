@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import normalizef from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-normalize@esm/index.mjs';
+import normalizef from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-normalize@v0.2.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-normalize@esm/index.mjs';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-normalize@v0.2.1-esm/index.mjs';
 ```
 
 #### normalizef( x )
@@ -148,7 +148,7 @@ import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/i
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
 import pow from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-pow@esm/index.mjs';
 import toFloat32 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@esm/index.mjs';
-import normalizef from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-normalize@esm/index.mjs';
+import normalizef from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-normalize@v0.2.1-esm/index.mjs';
 
 var frac;
 var exp;
