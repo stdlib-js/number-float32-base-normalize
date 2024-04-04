@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/number-float32-base-normalize",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Return a normal number `y` and exponent `exp` satisfying `x = y * 2^exp`.",
   "license": "Apache-2.0",
   "author": {
